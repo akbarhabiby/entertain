@@ -19,7 +19,7 @@ app.use(errorhandler)
 
 // * Listen App
 app.listen(port, () => {
-  console.log(`📺  TV Service ready at http://127.0.0.1:${port}/`)
+  console.log(`📺  TV Service ready at http://localhost:${port}/`)
 })
 
 // **** TV Service
