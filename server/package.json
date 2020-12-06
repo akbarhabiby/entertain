@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run tvService\" \"npm run movieService\" \"npm run orchestrator\"",
+    "start": "concurrently \"npm run tvService\" \"npm run movieService\" \"npm run orchestrator\"",
     "tvService": "node ./services/tvService/app.js",
     "movieService": "node ./services/movieService/app.js",
     "orchestrator": "node ./orchestrator/app.js"
