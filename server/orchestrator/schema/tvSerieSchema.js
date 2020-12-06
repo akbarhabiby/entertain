@@ -71,7 +71,7 @@ const resolvers = {
 
       const { data: objTvserie } = await api({
         method: 'GET',
-        url: '/' + id
+        url: '/' + tvId
       })
 
       // * Set cached single data tvseries

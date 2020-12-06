@@ -75,7 +75,7 @@ const resolvers = {
       })
 
       // * Set cached single data movies
-      await redis.set(`1337_movie-${movieId}`, JSON.stringify(movie), 'EX', 600)
+      await redis.set(`1337_movie-${movieId}`, JSON.stringify(objMovie), 'EX', 600)
 
       // * Return Object Movie
       return objMovie
