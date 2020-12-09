@@ -10,29 +10,16 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/" onClick={(e) => handleChangePage(e, '/')}>Entertainme</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="/" onClick={(e) => handleChangePage(e, '/')}>Home</a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="/" onClick={(e) => handleChangePage(e, '/movies')}>Movies</a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="/" onClick={(e) => handleChangePage(e, '/tvseries')}>TVSeries</a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="/favorites" onClick={(e) => handleChangePage(e, '/favorites')}>Favorites</a>
-          </li>
+    <div className="header_top">
+      <div className="col-sm-3 logo"><a href="/" style={{ color: 'inherit' }} onClick={(e) => handleChangePage(e, '/')}><img src="images/logo.png" alt=""/>Home</a></div>
+      <div className="col-sm-6 nav">
+        <ul>
+          <li><h4><a href="/movies" style={{ color: 'inherit', marginRight: '20px' }} onClick={(e) => handleChangePage(e, '/movies')}>Movies</a></h4></li>
+          <li><h4><a href="/tvseries" style={{ color: 'inherit', marginRight: '20px' }} onClick={(e) => handleChangePage(e, '/tvseries')}>TVSeries</a></h4></li>
+          <li><h4><a href="/favorites" style={{ color: 'inherit', marginRight: '20px' }} onClick={(e) => handleChangePage(e, '/favorites')}>Favorites</a></h4></li>
         </ul>
-        {/* <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> */}
       </div>
-    </nav>
+      <div className="clearfix"></div>
+    </div>
   )
 }

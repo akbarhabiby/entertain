@@ -1,21 +1,18 @@
 import React from 'react'
 import { Data } from './'
 
-export default function DataTable({ data }) {
+export default function DataTable({ data, refetch }) {
+  const { __typename } = data[0]
   return (
-    <table className="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">No</th>
-          <th scope="col">Title</th>
-          <th scope="col">Popularity</th>
-          <th scope="col">Tags</th>
-          <th scope="col">Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, i) => <Data key={item._id} item={item} index={i + 1} />)}
-      </tbody>
-    </table>
+    <div className="content">
+      <div className="box_1">
+        <h1 className="m_2">{ __typename === 'Movie' ? 'Featured Movies' : 'Featured TV Series' }</h1>
+        <div className="clearfix"></div>
+      </div>
+      <div className="box_2">
+        {data.map((item, i) => <Data item={item} key={item._id} index={i} type={__typename} refetch={refetch} />)}
+        <div className="clearfix"></div>
+      </div>
+    </div>
   )
 }
